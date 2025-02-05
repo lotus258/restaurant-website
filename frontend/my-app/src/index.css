@@ -1,0 +1,48 @@
+body {
+  font-size: medium;
+  font-family: Karla;
+  color: #F4CE14;
+  color: #495E57;
+  color: #EE9972;
+  color: #FBDABB;
+  color: #EDEFEE;
+  COLOR: #333;
+}
+
+h1 {
+  font-family: Markazi;
+  font-weight: bold;
+  font-size: 5vw;
+  color: #F4CE14;
+}
+
+h2 {
+  font-family: Markazi;
+  font:Markazi;
+  font-size: 4vw;
+  font-weight: medium;
+  color: #EDEFEE;
+}
+
+p {
+  font-size:medium;
+  font-family:Karla;
+  font-size: 1vw;
+  line-height: 1.5;
+}
+
+button {
+  padding: 1vw;
+  text-align: center;
+  font-family: Karla;
+  font-size: 1vw;
+  width: 15vw;
+  border: 1px solid #333;
+  font-weight:bold;
+  background:#F4CE14;
+}
+
+nav ul {
+  list-style-type: none;
+  align-items: left;
+}
