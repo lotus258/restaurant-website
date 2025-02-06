@@ -12,7 +12,7 @@ function Menu(){
           return;
       }
 
-        axios.get('http://localhost:8000/restaurant/menu/', {
+        axios.get('http://localhost:8000/restaurant/menu', {
           headers: {
             Authorization: `Token ${token}`
           }
