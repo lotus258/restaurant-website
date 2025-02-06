@@ -1,4 +1,4 @@
-import "../App.css"
+import "./CSS/Nav.css"
 
 function Nav(props) {
     return (
