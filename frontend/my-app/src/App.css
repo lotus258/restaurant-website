@@ -11,13 +11,6 @@
   grid-template-columns: repeat(10, 1fr);
 }
 
-
-
-.main {
-  grid-column: col-start / span 12;
-}
-
-
 .bookingPage {
   grid-column: col-start / span 12;
   display:grid;
@@ -28,40 +21,9 @@
   align-items: center;
 }
 
-.cardTitle {
-  font: bold 2vw/1.5 Karla;
+.main {
+  grid-column: col-start / span 12;
 }
-
-.reserveTitle {
-  grid-column: 1 / 13;
-  grid-row: 1;
-}
-
-.bookingForm {
-  grid-column: 1 / 13;
-  padding: 20px;
-  width: 50vw;
-  display:flex;
-  max-width: 200;
-  gap: 20;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: auto;
-}
-
-.occasionContainer {
-  display: flex;
-  align-items: center;
-}
-
-#occasion {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
 
 button {
   padding: 1vw;
@@ -80,5 +42,11 @@ button {
 button:hover {
   background-color: #EE9972; 
   transform: scale(1.1);
+}
+
+.banner {
+    grid-column: 1 / 13;
+    grid-row: 1;
+    background: #495E57;
 }
 

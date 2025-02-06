@@ -69,7 +69,9 @@ function Login(){
 
        return (
         <div>
-          <h3>Login</h3>
+            <div className="banner">
+                <h2 style={{color:"#F4CE14"}}>Log in</h2>
+            </div>
             <form onSubmit={handleSubmit}>
                 <ul>
                     {loginError && <p style={{ color: "red" }}>{loginError}</p>}

@@ -1,13 +1,16 @@
 import "./CSS/About.css"
+import "./CSS/Reservation.css"
 
 function About() {
 
-return (
-    <div id="about">
-        <h2 style={{gridRow:"1", color:"#F4CE14", gridColumn:'1/13', gridRow: '1', backgroundColor:"#495E57"}}>About Us</h2>
+return (<>
+        <div id="about">
+        <div className="banner">
+             <h2 style={{color:"#F4CE14"}}>About us</h2>
+        </div>
         <div id="about-intro">
-            Little Lemon is a cornerstone in the Salt Lake community and has been recognized for its outstanding Chinese cuisine, excellent service and friendly staff. We offer delicious best Chinese takeout in Salt Lake City.
-Jian started out at the Pearl Restaurant in the 80s. -- from Cafe Ahn Hong </div>
+             Little Lemon is a cornerstone in the Salt Lake community and has been recognized for its outstanding Chinese cuisine, excellent service and friendly staff. We offer delicious best Chinese takeout in Salt Lake City.Jian started out at the Pearl Restaurant in the 80s. -- from Cafe Ahn Hong.
+        </div>
         <div id="about-hours">
             <div id='hours'>
                 <ul>Open hours:</ul>
@@ -28,6 +31,7 @@ Jian started out at the Pearl Restaurant in the 80s. -- from Cafe Ahn Hong </div
              </iframe>
         </div>
     </div>
+    </>
     );
 }
 export default About;

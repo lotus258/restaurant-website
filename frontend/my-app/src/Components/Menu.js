@@ -27,12 +27,16 @@ function Menu(){
 
     return (
         <div>
-          <h1>Menu</h1>
+          <div className="banner">
+            <h2 style={{color:"#F4CE14"}}>Menu</h2>
+        </div>
+        <div>
           <ul>
             {menu.map(item => (
               <li style={{color: "black", fontSize:"25px"}} key={item.id}>{item.title}: {item.price}</li>
             ))}
           </ul>
+          </div>
         </div>
       );
 }

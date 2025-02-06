@@ -1,0 +1,40 @@
+
+.bookingPage {
+    grid-column: col-start / span 12;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    gap:20pt;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardTitle {
+    font: bold 2vw/1.5 Karla;
+  }
+
+  .bookingForm {
+    grid-column: 1 / 13;
+    padding: 20px;
+    width: 50vw;
+    display:flex;
+    max-width: 200;
+    gap: 20;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .occasionContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  #occasion {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
