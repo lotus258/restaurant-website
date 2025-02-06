@@ -7,7 +7,7 @@ function Special() {
             <section style={{display:"grid", gridTemplateColumns:"2fr 1fr"}}>
                 <h2 style={{color:"#333", textAlign:"left"}}>This weeks' specials!</h2>
                 <div style={{ textAlign: 'center', justifyContent:"center", display:"flex", alignItems:"center"}}>
-                    <button className="button">Online Menu</button>
+                    <button className="button" onClick={{color: "red"}}>Online Menu</button>
                 </div>
             </section>
             <section id="special_card">

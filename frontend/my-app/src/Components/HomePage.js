@@ -9,8 +9,8 @@ function HomePage() {
         <div className="homePage">
             <CallToAction />
             <Special />
-            <CustomersSay />
-            <Chicago />
+            {/* <CustomersSay /> */}
+            {/* <Chicago /> */}
         </div>
     )
 }

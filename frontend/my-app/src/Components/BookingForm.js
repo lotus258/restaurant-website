@@ -1,21 +1,23 @@
 import AvailableTimes from "./AvailableTimes";
 import {useState} from "react";
-import { submitAPI} from "./MimicAPI";
+// import { submitAPI} from "./MimicAPI";
+import axios from 'axios'
 
 function BookingForm(props) {
+    const [name, setName] = useState("");
     const [resTime, setResTime] = useState("");
+    const [date, setDate] =  useState("");
     const [guest, setGuest] = useState(0);
     const [occasion, setOccasion] = useState("");
 
     const handleDateChange = (event) => {
         const newDate = new Date(event.target.value);
-        if (isNaN(newDate.getTime()) || newDate > new Date('2024-04-30') || newDate < new Date("2024-04-01")) {
-            alert("We currently only take appointment for April. Please select a date in April.");
-        } else {
-            props.setSelectedDate(event.target.value);
-        }
+        setDate(event.target.value);
     };
 
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+    };
     const handleGuestChange = (event) => {
         setGuest(event.target.value);
     };
@@ -30,7 +32,7 @@ function BookingForm(props) {
 
     const submitForm = ((formData) => {
         try {
-            submitAPI(formData);
+            axios.post("http://localhost:8000/restaurant/booking/tables/", formData);
             props.navigate('/reservationconfirmation.html');
         } catch (error) {
             console.log(error);
@@ -40,15 +42,17 @@ function BookingForm(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const selectedDate = props.selectedDate;
-        const formData = {date:selectedDate, time:resTime, guest:guest, occasion:occasion};
+        const formData = {date:selectedDate, name:name, date:date, time:resTime, guest:guest, occasion:occasion};
         props.setFormData(formData);
         submitForm(formData);
     };
 
     return (
             <form onSubmit={handleSubmit} className="bookingForm">
+                <label htmlFor="name" style={{padding: "10px"}} >Name</label>
+                <input type="text" id="name" onChange={handleNameChange} data-testid="name" required></input>
                 <label htmlFor="res-date" style={{padding: "10px"}} >Choose date</label>
-                <input type="date" id="res-date" value={props.selectedDate} onChange={handleDateChange} data-testid="res-date" required></input>
+                <input type="date" id="res-date"  onChange={handleDateChange} data-testid="res-date" required></input>
                 <label htmlFor="res-time"style={{padding: "10px"}}>Choose time</label>
                 <select id="res-time" value={resTime} onChange={handleTimeChange} required>
                     <option value="SelectBelow">Select Below:</option>

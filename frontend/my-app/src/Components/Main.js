@@ -5,6 +5,7 @@ import Login from "./Login";
 import Menu from "./Menu";
 import Loginsuccess from "./LoginSuccess";
 import Register from "./Register";
+import About from "./About";
 import {useState, useEffect,  useReducer} from "react";
 import ConfirmedBooking from "./ConfirmedBooking";
 import {fetchAPI } from "./MimicAPI";
@@ -64,6 +65,7 @@ function Main() {
                     <Route path="/login.html" element={<Login />}></Route>
                     <Route path="/login-success.html" element={<Loginsuccess />}></Route>
                     <Route path="/register.html" element={<Register/>}></Route>
+                    <Route path="/about.html" element={<About/>}></Route>
                 </Routes>
             </BrowserRouter>
         </div>

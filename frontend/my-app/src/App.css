@@ -29,47 +29,19 @@
 
 .nav-bar a {
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 1.3vw;
   color: black;
   font-weight: bold;
 }
 
 .nav-bar a:hover {
-  background-color: tomato;
+  background-color: #EE9972;
 }
 
 .main {
   grid-column: col-start / span 12;
 }
 
-.footer {
-  grid-column: span 12;
-  background-color: #495E57;
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-}
-
-.doorImage {
-  grid-column: 3 / 5;
-  grid-row: 2 / 11;
-  overflow: hidden;
-}
-
-.doorNav {
-  grid-column: 5 / 7;
-  grid-row: 3 / 11;
-}
-
-.contact {
-  grid-column: 7 / 9;
-  grid-row: 3 / 11;
-}
-
-.socialMedia {
-  grid-column: 9 / 11;
-  grid-row: 3 / 11;
-}
 
 .bookingPage {
   grid-column: col-start / span 12;

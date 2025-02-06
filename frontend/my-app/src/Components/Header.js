@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className="header">
                 <div className="logoContainer">
-                    <Logo style={{width:"100%", float:"left"}} alt="Little Lemon Restaurant Logo"></Logo>
+                    <Logo style={{width:"100%",  height: "auto"}} alt="Little Lemon Restaurant Logo"></Logo>
                 </div>
                 <Nav className="nav-bar"/>
         </header>
