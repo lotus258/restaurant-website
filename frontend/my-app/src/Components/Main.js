@@ -1,6 +1,10 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage  from "./HomePage";
 import BookingPage from "./BookingPage";
+import Login from "./Login";
+import Menu from "./Menu";
+import Loginsuccess from "./LoginSuccess";
+import Register from "./Register";
 import {useState, useEffect,  useReducer} from "react";
 import ConfirmedBooking from "./ConfirmedBooking";
 import {fetchAPI } from "./MimicAPI";
@@ -56,6 +60,10 @@ function Main() {
                     <Route path="/index.html" element={<HomePage />}></Route>
                     <Route path="/reservations.html" element={<BookingPage availableTimes={state.availableTimes} dispatch={dispatch} selectedDate={selectedDate} setSelectedDate={setSelectedDate} formData={formData} setFormData={setFormData}/>} ></Route>
                     <Route path="/reservationconfirmation.html" element={<ConfirmedBooking  formData={formData}/>} ></Route>
+                    <Route path="/menu.html" element={<Menu />}></Route>
+                    <Route path="/login.html" element={<Login />}></Route>
+                    <Route path="/login-success.html" element={<Loginsuccess />}></Route>
+                    <Route path="/register.html" element={<Register/>}></Route>
                 </Routes>
             </BrowserRouter>
         </div>
