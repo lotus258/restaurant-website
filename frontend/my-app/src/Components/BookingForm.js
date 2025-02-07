@@ -12,7 +12,7 @@ function BookingForm(props) {
 
     const handleDateChange = (event) => {
         const newDate = new Date(event.target.value);
-        setDate(event.target.value);
+        setDate(newDate);
     };
 
     const handleNameChange = (event) => {
@@ -32,17 +32,19 @@ function BookingForm(props) {
 
     const submitForm = ((formData) => {
         try {
+            console.log("==============")
+            console.log(formData)
             axios.post("http://localhost:8000/restaurant/booking/tables/", formData);
             props.navigate('/reservationconfirmation.html');
         } catch (error) {
+            console.log("xxxxxxxxxxxxxxxxxxxxxxx")
             console.log(error);
         }
     })
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const selectedDate = props.selectedDate;
-        const formData = {date:selectedDate, name:name, date:date, time:resTime, guest:guest, occasion:occasion};
+        const formData = {booking_date:date, name:name, booking_time:resTime, no_of_guests:guest, occasion:occasion};
         props.setFormData(formData);
         submitForm(formData);
     };
