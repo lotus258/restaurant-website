@@ -78,19 +78,17 @@ function Menu(){
           </div>
 
           <div>
-              <ul style={{ overflowY: "auto", padding: 10 }}>
                 {loading && <p>Loading...</p>}
                 {error && <p style={{ color: "red" }}>{error}</p>}
-                <section id="special_card" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                <div id="special_card" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
                   gap: "10px",padding: "20px"}}>
                   {menu.map(item => (
                     <ul style={{color: "black", fontSize:"25px"}} key={item.id}>
                       <Card name={item.title} price={item.price} imgurl = "./assets/greek salad.jpg" />
                     </ul>
                   ))}
-                </section>
-              </ul>
-            </div>
+                </div>
+          </div>
 
             <div className='page'>
                 <ul>Page:</ul>

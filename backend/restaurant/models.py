@@ -12,6 +12,8 @@ class Booking(models.Model):
     name = models.CharField(max_length=255)
     no_of_guests = models.IntegerField()
     booking_date = models.DateTimeField()
+    booking_time = models.CharField(max_length=255, default="17:00")
+    occasion = models.CharField(max_length=255, default='Birthday')
 
 class Menu(models.Model):
     title = models.CharField(max_length=255)

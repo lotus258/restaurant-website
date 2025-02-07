@@ -3,8 +3,8 @@ function Chicago () {
         <section className="chicago">
             <article className="intro" style={{gridColumn:"1 / 7", gridRow:"1 / 7"}}>
                 <h1 style={{textAlign: "left", marginTop: "0px", marginBottom: "1vw", color:"black"}}>Little Lemon</h1>
-                <h2 style={{textAlign: "left", marginTop: "0px", marginBottom: "1vw", color:"black"}}>Chicago</h2>
-                <p style={{textAlign: "left", color:"black", marginTop: "1vw", marginBottom: "1vw"}}>We are a family owned Mediterrian restaurant, focused on traditional reciipes served with a modern twist. We are a family owned Mediterrian restaurant, focused on traditional reciipes served with a modern twist.</p>
+                <h2 style={{textAlign: "left", marginTop: "0px", marginBottom: "1vw", color:"black"}}>SLC</h2>
+                <p style={{textAlign: "left", color:"black", marginTop: "1vw", marginBottom: "1vw"}}>We are a family owned Chinese restaurant, focused on traditional recipes served with a modern twist.</p>
             </article>
 
             <section className="RestaurantImageContainer" style={{gridColumn:"7 / 13", gridRow:"3 / 13", position:"relative"}}>

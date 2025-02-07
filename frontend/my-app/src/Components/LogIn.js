@@ -68,7 +68,7 @@ function Login(){
     })
 
        return (
-        <div style={{display:"grid", gridTemplateColumns:"repeat(1fr, 12)", gridTemplateRows:"repeat(1fr, 4)"}}>
+        <div style={{display:"grid", gridTemplateColumns:"repeat(1fr, 12)", gridTemplateRows:"repeat(1fr, 12)"}}>
             <div className="banner">
                 <h2 style={{color:"#F4CE14"}}>Log in</h2>
             </div>
