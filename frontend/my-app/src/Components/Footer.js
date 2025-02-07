@@ -12,12 +12,12 @@ function Footer() {
                 <Nav />
             </div>
             <div className="contact">
-                <ul>Contact:<br></br> 808-840-1225</ul>
+                <ul>Contact:<br></br> 888-888-8888</ul>
                 <ul>Email: <br></br>littlelemon@gmail.com</ul>
-                <ul>Address: <br></br>14204 Skyler Dr. Draper, Utah, 84020</ul>
+                <ul>Address: <br></br>12500 S 1300 E, Draper, UT 84020</ul>
             </div>
             <div className="socialMedia">
-                <ul>Social Media:</ul>
+                <ul>Follow us on:</ul>
                 <ul>Facebook</ul>
                 <ul>TikTok</ul>
                 <ul>Instagram</ul>

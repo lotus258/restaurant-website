@@ -1,7 +1,7 @@
 #about{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 5%;
 }
 
@@ -14,7 +14,7 @@
 
 #about-hours {
     grid-column: 3/6;
-    grid-row: 3;
+    grid-row: 3/5;
     text-align: left;
     grid-template-columns: 1fr 2fr;
     display:grid;
@@ -29,8 +29,8 @@
 }
 
 #map {
-    grid-column: 7/10;
-    grid-row: 3;
+    grid-column: 6/11;
+    grid-row: 3/5;
     position:relative;
 }
 

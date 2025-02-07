@@ -8,12 +8,12 @@ function Card(props) {
             </div>
             <div style={{display:"flex", gridRow:"4 / 6", }}>
                 <p style={{flex:"3"}}>{props.name}</p>
-                <p style={{color:"#EE9972", fontWeight:"medium", flex:"2"}}>{props.price}</p>
+                <p style={{color:"#EE9972", fontWeight:"medium", flex:"2"}}>${props.price}</p>
             </div>
             <p style={{lineHeight:"1.5", gridRow: "7 / 10"}}>{props.description}</p>
-            <div style={{display:"flex", alignContent:"left", gridRow:"11"}}>
+            {/* <div style={{display:"flex", alignContent:"left", gridRow:"11"}}>
                 <p style={{fontWeight:"bold", flex:"2"}}>Order a delivery</p>
-            </div>
+            </div> */}
         </div>
     );
 }

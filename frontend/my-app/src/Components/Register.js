@@ -64,9 +64,11 @@ function Register() {
     }
 
     return (
-        <div>
-        <h3>New User Registration</h3>
-          <form onSubmit={handleSubmit}>
+        <div style={{display:"grid", gridTemplateColumns:"repeat(1fr, 12)"}}>
+            <div className='banner'>
+                <h3 style={{color:"#F4CE14"}}>New User Registration</h3>
+            </div>
+            <form onSubmit={handleSubmit} style={{gridColumn:"3/10"}}>
               <ul>
                   <label>Username:&nbsp;&nbsp;&nbsp;</label>
                   <input type="text" name="username" placeholder="Username" onChange={handleChange} value={formData.username}></input>

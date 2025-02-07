@@ -9,11 +9,11 @@ return (<>
              <h2 style={{color:"#F4CE14"}}>About us</h2>
         </div>
         <div id="about-intro">
-             Little Lemon is a cornerstone in the Salt Lake community and has been recognized for its outstanding Chinese cuisine, excellent service and friendly staff. We offer delicious best Chinese takeout in Salt Lake City.Jian started out at the Pearl Restaurant in the 80s. -- from Cafe Ahn Hong.
+             Little Lemon is a cornerstone in the Salt Lake community and has been recognized for its outstanding Chinese cuisine, excellent service and friendly staff. We offer delicious best Chinese takeout in Salt Lake City6, since 1996. -- from Cafe Ahn Hong.
         </div>
         <div id="about-hours">
             <div id='hours'>
-                <ul>Open hours:</ul>
+                <ul style={{color:"#F4CE14"}}><b>Open hours:</b></ul>
                 <ul>Mon: 11:30 AM to 9:30 PM</ul>
                 <ul>Tue: Closed</ul>
                 <ul>Wed-Fri: 11:30 AM to 9:30 PM</ul>

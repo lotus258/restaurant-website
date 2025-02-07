@@ -14,7 +14,7 @@ def index(request):
     return render(request, 'index.html', {})
 
 @api_view(['GET','POST'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def menu_items(request):
     if(request.method == 'GET'):
         items = Menu.objects.select_related('category').all()
@@ -39,7 +39,15 @@ def menu_items(request):
         except EmptyPage:
             items = []
         serialized_item = MenuItemSerializer(items.object_list, many=True, context={'request': request})
-        return Response(serialized_item.data, status.HTTP_200_OK)
+
+        pagination_data = {
+            'count': paginator.count,
+            'next': items.has_next() and items.next_page_number() or None,
+            'previous': items.has_previous() and items.previous_page_number() or None,
+            'results': serialized_item.data
+        }
+
+        return Response(pagination_data, status.HTTP_200_OK)
 
     elif(request.method == 'POST'):
         user = request.user
@@ -52,7 +60,7 @@ def menu_items(request):
             return Response({'message':'not authorized'}, status.HTTP_403_FORBIDDEN)
 
 @api_view(['GET','POST'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def categories(request):
     if request.method == 'GET':
         categories = Category.objects.all()
