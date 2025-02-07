@@ -2,37 +2,12 @@
   .footer {
     grid-column: span 12;
     background-color: #495E57;
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    display:flex;
     color: white;
-  }
-
-  .doorImage {
-    grid-column: 3 / 5;
-    grid-row: 2 / 11;
-    overflow: hidden;
     justify-content: center;
-    align-items: center;
-  }
-
-  .doorNav {
-    grid-column: 5 / 7;
-    grid-row: 3 / 11;
-    font-size: 1vw;
-    text-align: left;
   }
 
   .contact {
-    grid-column: 7 / 9;
-    grid-row: 3 / 11;
     font-size: 1vw;
-    text-align: left;
-  }
-
-  .socialMedia {
-    grid-column: 9 / 11;
-    grid-row: 3 / 11;
-    font-size: 1vw;
-    text-align: left;
+    text-align: center;
   }

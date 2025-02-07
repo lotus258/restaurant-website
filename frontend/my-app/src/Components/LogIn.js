@@ -68,11 +68,11 @@ function Login(){
     })
 
        return (
-        <div style={{display:"grid", gridTemplateColumns:"repeat(1fr, 12)"}}>
+        <div style={{display:"grid", gridTemplateColumns:"repeat(1fr, 12)", gridTemplateRows:"repeat(1fr, 4)"}}>
             <div className="banner">
                 <h2 style={{color:"#F4CE14"}}>Log in</h2>
             </div>
-            <form onSubmit={handleSubmit} style={{gridColumn:"3/10"}}>
+            <form onSubmit={handleSubmit} style={{gridColumn:"3/10", gridRow:"4"}}>
                 <ul>
                     {loginError && <p style={{ color: "red" }}>{loginError}</p>}
                     <label>Username:&nbsp;&nbsp;&nbsp;</label>
@@ -88,7 +88,7 @@ function Login(){
                     <button type='submit' disabled={!formData.username || !formData.password}>Login</button>
                 </ul>
                 <ul>
-                    <a href="/register.html">New user? register here </a>
+                    <a href="/register.html">New user? register here. </a>
                 </ul>
             </form>
         </div>
