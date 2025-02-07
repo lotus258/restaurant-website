@@ -19,21 +19,21 @@ function Menu(){
 
     const fetchData = async () => {
 
-      //User authentication
-      const token = localStorage.getItem("authToken");
-      if (!token) {
-          console.error("Please log in first to view our secret Menu!");
-          return;
-      }
+      // //User authentication
+      // const token = localStorage.getItem("authToken");
+      // if (!token) {
+      //     console.error("Please log in first to view our secret Menu!");
+      //     return;
+      // }
 
       setLoading(true);
       setError(null);
 
       try {
         const response = await axios.get(`http://localhost:8000/restaurant/menu?page=${currentPage}&category=${currentCategory}&ordering=${selectedOrdering}`, {
-            headers: {
-                Authorization: `Token ${token}`
-            }
+            // headers: {
+            //     Authorization: `Token ${token}`
+            // }
         });
 
         setMenu(response.data.results);
