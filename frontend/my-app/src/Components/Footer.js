@@ -4,13 +4,6 @@ import Nav from "./Nav"
 function Footer() {
     return (
         <div className="footer">
-            {/* <div className="doorImage">
-                <img src="./assets/logo.png" style={{ width: '10vw', height: 'auto'}}  alt="door mat navigation image"></img>
-            </div> */}
-            {/* <div className="doorNav">
-                <ul>Navigation: </ul>
-                <Nav />
-            </div> */}
             <div className="contact">
                 <ul><br></br></ul>
                 <ul><br></br></ul>
