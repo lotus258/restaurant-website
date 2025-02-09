@@ -32,9 +32,12 @@ function BookingForm(props) {
 
     const submitForm = ((formData) => {
         try {
+            console.log("==============")
+            console.log(formData)
             axios.post("http://localhost:8000/restaurant/booking/tables/", formData);
             props.navigate('/reservationconfirmation.html');
         } catch (error) {
+            console.log("xxxxxxxxxxxxxxxxxxxxxxx")
             console.log(error);
         }
     })
