@@ -80,17 +80,17 @@ function Menu(){
           <div>
                 {loading && <p>Loading...</p>}
                 {error && <p style={{ color: "red" }}>{error}</p>}
-                <div id="special_card" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-                  gap: "10px",padding: "20px"}}>
+
+                <div id="menu">
                   {menu.map(item => (
-                    <ul style={{color: "black", fontSize:"25px"}} key={item.id}>
-                      <Card name={item.title} price={item.price} imgurl = "./assets/greek salad.jpg" />
+                    <ul style={{color: "black", fontSize:"2vw"}} key={item.id}>
+                      <li  style={{listStyle: 'none'}}><Card name={item.title} price={item.price} imgurl = "./assets/greek salad.jpg" /></li>
                     </ul>
                   ))}
                 </div>
           </div>
 
-            <div className='page'>
+            <div className='page' style={{"display":"flex" }}>
                 <ul>Page:</ul>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <ul key={page} onClick={() => setCurrentPage(page)} style={{ fontWeight: currentPage === page ? "bold" : "normal" }}>

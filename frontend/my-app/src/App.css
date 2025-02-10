@@ -11,16 +11,6 @@
   grid-template-columns: repeat(10, 1fr);
 }
 
-.bookingPage {
-  grid-column: col-start / span 12;
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto;
-  gap:20pt;
-  justify-content: center;
-  align-items: center;
-}
-
 .main {
   grid-column: col-start / span 12;
 }
@@ -40,7 +30,7 @@ button {
 }
 
 button:hover {
-  background-color: #EE9972; 
+  background-color: #EE9972;
   transform: scale(1.1);
 }
 
@@ -50,3 +40,8 @@ button:hover {
     background: #495E57;
 }
 
+@media (max-width: 768px) {
+  button {
+    font-size: 2vw;
+  }
+}

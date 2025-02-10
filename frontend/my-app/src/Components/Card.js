@@ -11,9 +11,6 @@ function Card(props) {
                 <p style={{color:"#EE9972", fontWeight:"medium", flex:"2"}}>${props.price}</p>
             </div>
             <p style={{lineHeight:"1.5", gridRow: "7 / 10"}}>{props.description}</p>
-            {/* <div style={{display:"flex", alignContent:"left", gridRow:"11"}}>
-                <p style={{fontWeight:"bold", flex:"2"}}>Order a delivery</p>
-            </div> */}
         </div>
     );
 }

@@ -86,4 +86,9 @@ nav ul {
     .nav-links a:hover {
       background-color: #EE9972;
     }
+
+    .logoContainer {
+      grid-column: 1 / 6;
+      align-self: start;
+    }
   }

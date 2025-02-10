@@ -1,6 +1,5 @@
 import "./CSS/Reservation.css"
 import BookingForm from "./BookingForm"
-import { useNavigate } from "react-router-dom";
 
 function BookingPage() {
 

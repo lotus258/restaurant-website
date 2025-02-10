@@ -1,7 +1,7 @@
 import "./CSS/Nav.css"
 import {useState} from 'react'
 
-function Nav(props) {
+function Nav() {
     const[isMobile, setIsMobile] =  useState(false);
 
     const toggleMenu = () => {
@@ -15,7 +15,6 @@ function Nav(props) {
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./reservations.html">Reservations</a></li>
-                {/* <li><a href="./orderOnline.html">Order Online</a></li> */}
                 <li><a href="./login.html">Login</a></li>
             </ul>
             <div className="hamburger" onClick={toggleMenu}>

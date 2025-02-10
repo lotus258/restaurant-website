@@ -53,15 +53,19 @@ function BookingForm(props) {
             <form onSubmit={handleSubmit} className="bookingForm">
                 <label htmlFor="name" style={{padding: "10px"}} >Name</label>
                 <input type="text" id="name" onChange={handleNameChange} data-testid="name" required></input>
+                <br></br>
                 <label htmlFor="res-date" style={{padding: "10px"}} >Choose date</label>
                 <input type="date" id="res-date"  onChange={handleDateChange} data-testid="res-date" required></input>
+                <br></br>
                 <label htmlFor="res-time"style={{padding: "10px"}}>Choose time</label>
                 <select id="res-time" value={resTime} onChange={handleTimeChange} required>
                     <option value="SelectBelow">Select Below:</option>
                     <AvailableTimes availableTimes={initialState.availableTimes} style={{padding: "10px"}}/>
                 </select>
+                <br></br>
                 <label htmlFor="guests" style={{padding: "10px"}}>Number of guests</label>
                 <input type="number" placeholder="1" min="1" max="10" id="guests" onChange={handleGuestChange} required></input>
+                <br></br>
                 <label htmlFor="occasion" style={{padding: "10px"}}>Occasion</label>
                 <div className="occasionContainer">
                     <select id="occasion" value={occasion} onChange={handleOccassionChange} required>

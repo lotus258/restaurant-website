@@ -2,30 +2,22 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 5%;
 }
 
 #about-intro{
-    grid-row: 2;
+    grid-row: 2/3;
     grid-column: 3/11;
     font-size: 1.5vw;
     align-self: center;
 }
 
 #about-hours {
-    grid-column: 3/6;
+    grid-column: 3/5;
     grid-row: 3/5;
-    text-align: left;
-    grid-template-columns: 1fr 2fr;
-    display:grid;
+    text-align: center;
     font-size: 1.2vw;
     font-family: Karla;
     align-self: center;
-}
-
-#hours {
-    grid-column: 3;
-    text-align: center;
 }
 
 #map {
@@ -42,3 +34,22 @@
     height: 100%;
 }
 
+@media (max-width: 768px) {
+    #about-intro {
+      font-size: 3vw;
+      grid-column: 2/12;
+    }
+
+    #about-hours {
+        font-size: 3vw;
+        grid-column: 2/10;
+        grid-row: 3/5;
+        align-self: center;
+    }
+
+    #map {
+        grid-column: 1/12;
+        grid-row: 5/7;
+        min-height: 200px;
+    }
+}
