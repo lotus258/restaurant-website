@@ -1,7 +1,7 @@
 import AvailableTimes from "./AvailableTimes";
 import {useState} from "react";
-// import { submitAPI} from "./MimicAPI";
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 function BookingForm(props) {
     const [name, setName] = useState("");
@@ -9,6 +9,12 @@ function BookingForm(props) {
     const [date, setDate] =  useState("");
     const [guest, setGuest] = useState(0);
     const [occasion, setOccasion] = useState("");
+
+    const navigate = useNavigate();
+
+    const initialState = {
+        availableTimes: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
+    };
 
     const handleDateChange = (event) => {
         const newDate = new Date(event.target.value);
@@ -30,23 +36,17 @@ function BookingForm(props) {
         setOccasion(event.target.value);
     };
 
-    const submitForm = ((formData) => {
-        try {
-            console.log("==============")
-            console.log(formData)
-            axios.post("http://localhost:8000/restaurant/booking/tables/", formData);
-            props.navigate('/reservationconfirmation.html');
-        } catch (error) {
-            console.log("xxxxxxxxxxxxxxxxxxxxxxx")
-            console.log(error);
-        }
-    })
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = {booking_date:date, name:name, booking_time:resTime, no_of_guests:guest, occasion:occasion};
-        props.setFormData(formData);
-        submitForm(formData);
+
+        try {
+            await axios.post("http://localhost:8000/restaurant/booking/tables/", formData);
+            navigate('/reservationconfirmation.html', {state: {formData}});
+
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -58,7 +58,7 @@ function BookingForm(props) {
                 <label htmlFor="res-time"style={{padding: "10px"}}>Choose time</label>
                 <select id="res-time" value={resTime} onChange={handleTimeChange} required>
                     <option value="SelectBelow">Select Below:</option>
-                    <AvailableTimes availableTimes={props.availableTimes} style={{padding: "10px"}}/>
+                    <AvailableTimes availableTimes={initialState.availableTimes} style={{padding: "10px"}}/>
                 </select>
                 <label htmlFor="guests" style={{padding: "10px"}}>Number of guests</label>
                 <input type="number" placeholder="1" min="1" max="10" id="guests" onChange={handleGuestChange} required></input>

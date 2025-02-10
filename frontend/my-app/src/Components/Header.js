@@ -8,7 +8,7 @@ function Header() {
                 <div className="logoContainer">
                     <Logo style={{width:"100%",  height: "auto"}} alt="Little Lemon Restaurant Logo"></Logo>
                 </div>
-                <Nav className="nav-bar"/>
+                <Nav />
         </header>
     )
 }

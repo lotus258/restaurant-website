@@ -13,9 +13,9 @@ function Special() {
                 </div>
             </section>
             <section id="special_card">
-                <Card name="Greek Salad" imgurl = "./assets/greek salad.jpg" price="$12.99" description="We are a family owned Mediterian restaurant. Focused on traditional recipes served with a modern twist."/>
-                <Card name="Bruchetta" imgurl = "/assets/greek salad.jpg" price="$5.99" description="We are a family owned Mediterian restaurant. Focused on traditional recipes served with a modern twist."/>
-                <Card name="Lemon Dessert" imgurl = "./assets/greek salad.jpg" price="$5.00" description="We are a family owned Mediterian restaurant. Focused on traditional recipes served with a modern twist."/>
+                <Card name="Tonkotsu Ramen" imgurl = "./assets/greek salad.jpg" price="12.99" description="Rich and flavorful noodle soup with savory broth made from pork bones simmered for hours."/>
+                <Card name="Shoyu Ramen" imgurl = "/assets/greek salad.jpg" price="15.99" description="Noodle soup characterized by its soy-based broth made by combining soy sauce with a rich pork stock."/>
+                <Card name="Tiramisu " imgurl = "./assets/greek salad.jpg" price="4.50" description="Layers of coffee-soaked ladyfingers combined with creamy mascarpone cheese, egg yolks, sugar, and vanilla."/>
             </section>
         </section>
     );

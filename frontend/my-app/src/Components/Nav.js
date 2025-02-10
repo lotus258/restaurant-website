@@ -1,9 +1,16 @@
 import "./CSS/Nav.css"
+import {useState} from 'react'
 
 function Nav(props) {
+    const[isMobile, setIsMobile] =  useState(false);
+
+    const toggleMenu = () => {
+        setIsMobile(!isMobile);
+    }
+
     return (
-        <nav className={props.className}>
-            <ul>
+        <nav className="nav-bar">
+            <ul className={`nav-links ${isMobile ? 'active' : ''}`}>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./menu.html">Menu</a></li>
@@ -11,6 +18,11 @@ function Nav(props) {
                 {/* <li><a href="./orderOnline.html">Order Online</a></li> */}
                 <li><a href="./login.html">Login</a></li>
             </ul>
+            <div className="hamburger" onClick={toggleMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>
         </nav>
     )
 }
