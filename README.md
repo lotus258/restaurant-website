@@ -1,11 +1,13 @@
-run backend server on terminal 1:
-cd backend
-python manage.py runserver
+# How to start the project
 
-run frontend on terminal 2:
-cd frontend
-cd my-app
-npm start
+- run backend server on terminal 1:
+  - cd backend
+  - python manage.py runserver
 
-urls:
-http://localhost:3000/index.html
+- run frontend on terminal 2:
+  - cd frontend
+  - cd my-app
+  - npm start
+
+- urls:
+  - http://localhost:3000/index.html
